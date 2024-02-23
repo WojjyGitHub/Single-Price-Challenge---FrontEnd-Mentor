@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    background-color: hsl(204, 43%, 93%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 60px 40px;
+    font-family: 'Karla', sans-serif;
+}
+
+.community {
+    background-color: white;
+}
+
+.subscription {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(179, 62%, 43%);
+}
+
+.why {
+    background-color: hsl(179, 37%, 57%);
+}
+
+.community, .subscription, .why {
+    padding: 0.8rem 1.2rem;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+
+p {
+    font-size: 0.9rem;
+}
+
+p, a {
+    line-height: 27px;
+}
+
+h1 {
+    font-size: 1.2rem;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+.community {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    grid-area: community;
+}
+
+.community h1 {
+    color: hsl(179, 62%, 43%);
+}
+
+.community h2 {
+    color: hsl(71, 73%, 54%);
+}
+
+.community p {
+    color: hsl(218, 22%, 67%)
+    ;
+}
+
+.subscription h1, .subscription .price, .subscription p {
+    color:  white;
+}
+
+.price {
+    font-size: 2rem;
+}
+
+.month {
+    color: lightgray;
+    vertical-align: top;
+}
+
+.button {
+    padding: 10px;
+    background-color: hsl(71, 73%, 54%);
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.sub-middle {
+    margin: 0px;
+}
+.subscription {
+    grid-area: subscription;
+}
+
+.subscription h1 {
+    margin-bottom: 20px;
+}
+
+.access {
+    margin: 5px 0px 30px 0px;
+}
+
+.why {
+    grid-area: why;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.why h1 {
+    color: white;
+}
+
+.why a {
+    color: lightgrey;
+    text-decoration: none;
+    line-height: 22px;
+    font-size: 0.8rem;
+}
+
+.why ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+@media (min-width: 900px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "community community"
+            "subscription why";
+        max-width: 700px;
+    }
+
+    body {
+        height: 100vh;
+        padding: 100px 200px;
+    }
+
+    .why {
+        border-bottom-left-radius: 0px;
+    }
+
+    .subscription {
+        border-bottom-left-radius: 5px;
+    }
+
+    .community, .subscription, .why {
+        padding: 1.2rem 2rem;
+    }
+
+    .community h1 {
+        font-size: 1.4rem;
+    }
+}
